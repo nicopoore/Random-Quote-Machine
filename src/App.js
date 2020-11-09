@@ -1,7 +1,8 @@
 import './App.css';
-import QuoteDiv from './QuoteDiv.js';
+import MainDiv from './MainDiv.js';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
+import { Spring } from 'react-spring/renderprops';
 
 const NEW_QUOTE = 'NEW_QUOTE'
 
@@ -29,7 +30,17 @@ const store = createStore(rootReducer);
 function App() {
   return (
     <Provider store={store}>
-      <QuoteDiv />
+      <Spring
+        from={{ opacity: 0 }}
+        to={{ opacity: 1 }}
+        config={{ delay: 300 }}
+      >
+        {props => (
+          <div style={props}>
+            <MainDiv />
+          </div>
+        )}
+      </Spring>
     </Provider>
   );
 }

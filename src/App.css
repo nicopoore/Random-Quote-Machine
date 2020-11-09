@@ -4,7 +4,7 @@ html body {
   background-color: #caf;
 }
 
-.QuoteDiv {
+.MainDiv {
   position: fixed;
   text-align: center;
   width: 35%;
@@ -33,7 +33,7 @@ html body {
   font-family: 'Montserrat', sans-serif;
 }
 
-#buttons > *{
+.ButtonDiv > *{
   margin-top: 2rem;
   font-weight: 500;
 }
@@ -56,13 +56,13 @@ html body {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
-  .QuoteDiv {
+  .MainDiv {
     width: 50%
   }
 }
 
 @media only screen and (max-width: 767px) {
-  .QuoteDiv {
+  .MainDiv {
     width: 90%;
   }
 }
